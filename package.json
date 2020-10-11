@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "compile:scss": "node-sass theme/scss/main.scss theme/css/index.css",
-    "scss": "node-sass ./package/src/scss/style.scss ./package/src/dist/css/style.min.css"
+    "scss": "node-sass ./src/Shared/scss/styles.scss ./theme/dist/css/style.min.css"
   },
   "eslintConfig": {
     "extends": "react-app"
