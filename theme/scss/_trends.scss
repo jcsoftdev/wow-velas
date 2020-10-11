@@ -1,0 +1,171 @@
+// --color-primary: #93328E;
+//   --color-primary-light: #C998C7;
+//   --color-secondary: #00B5E2;
+//   --color-dark: #545454;
+.product {
+  display: grid;
+  grid-template-columns: 75px auto 75px;
+  grid-template-areas: "title title title" "iconLeft slides iconRight";
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    margin:  0 3.2rem;
+    align-items: center;
+    &-btn {
+      display: flex;
+      width: 10.5rem;
+      background-color: #ffffff00;
+      color: #fff;
+      font-size: 1.4rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    font-size: 4.8rem;
+    margin-top: 5rem;
+    margin-bottom: 8.7rem;
+    grid-area: title;
+    text-align: center;
+    color: var(--color-primary);
+    // position: relative;
+    & span {
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url(../images/adorno-titulo.png);
+        width: 45px;
+        height: 76.68px;
+        background-size: 100%;
+        position: absolute;
+        top: -3rem;
+        left: -7rem;
+      }
+      &::after  {
+        content: "";
+        background-image: url(../images/adorno-titulo.png);
+        width: 45px;
+        height: 76.68px;
+        background-size: 100%;
+        position: absolute;
+        top: -3rem;
+        right: -7rem;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 0.7rem;
+  }
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.3rem;
+    &--offer {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin: 0 0.3rem;
+    }
+    &--normal {
+      color: #c998c7;
+      margin: 0 0.3rem;
+      font-size: 1.6rem;
+    }
+  }
+  &__slides {
+    grid-area: slides;
+    max-height: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    &:hover>.product__item:hover {
+      background-color: var(--color-primary);
+      .product__subtitle,
+      .product__price--offer {
+        color: #fff;
+      }
+    }
+    & .product {
+      // ===============================product item======================================
+      &__item {
+        width: 267px;
+        border-radius: 0.8rem;
+        background-color: var(--color-light);
+        height: 40rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: height .6s ease;
+        overflow: hidden;
+        &:hover {
+          height: 45.6rem;
+        }
+      }
+
+      &__image {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.6rem 2.4rem;
+        width: 100%;
+        height: 271px;
+
+        border-radius: 0.8rem;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+      &__description {
+        // height: 12.8rem;
+        transition: height 3s ease;
+
+        &:hover {
+
+        }
+      }
+
+      &__colors {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 6rem;
+        padding-top: 0.6rem;
+        justify-content: space-evenly;
+        align-items: center;
+        .color {
+          justify-self: center;
+          width: 21.57px;
+          height: 21.57px;
+          border-radius: 100%;
+          &-01 {
+            background-color: #f69e1a;
+          }
+          &-02 {
+            background-color: #ec441f;
+          }
+          &-03 {
+            background-color: #faff00;
+          }
+          &-04 {
+            background-color: #fc4fb7;
+          }
+        }
+      }
+    }
+  }
+  &__icon--left {
+    align-self: center;
+    grid-area: iconLeft;
+    cursor: pointer;
+  }
+  &__icon--right {
+    grid-area: iconRight;
+    align-self: center;
+    cursor: pointer;
+  }
+}

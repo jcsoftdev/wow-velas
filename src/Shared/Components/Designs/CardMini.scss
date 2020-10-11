@@ -1,0 +1,41 @@
+.card-mini {
+  border-radius: 12px;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  max-width: 500px;
+  width: 371px;
+  justify-content: space-evenly;
+  margin: 0 1rem;
+  max-height: 127px;
+  min-width: 350px;
+}
+
+.card-mini .avatar img {
+  width: 9.5rem
+
+}
+
+.card-mini .avatar {
+  // width: 70%;
+  // min-width: 45%;
+  width: 30%;
+  margin: 2rem 1rem;
+}
+
+.card-mini .content {
+  margin: 0 .5rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-mini .content h3 {
+  font-size: 3rem;
+  color: var(--tertiary-color);
+}
+
+.card-mini .content p {
+  font-size: 2rem;
+}

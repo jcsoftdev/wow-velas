@@ -1,0 +1,80 @@
+.velas {
+  display: grid;
+  grid-template-columns: 6.4rem auto 6.4rem;
+  grid-template-areas: "title title title" "iconLeft content iconRight";
+  width: calc(100vw - 13.6rem);
+  margin: 0 auto;
+  margin-bottom: 8.3rem;
+  &__title {
+    grid-area: title;
+    text-align: center;
+    font-size: 4.8rem;
+    margin-top: 3.6rem;
+    margin-bottom: 7.5rem;
+    & span {
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url(../../Shared/Images/adorno-celeste.png);
+        width: 45px;
+        height: 76.68px;
+        background-size: 100%;
+        position: absolute;
+        top: -3rem;
+        left: -7rem;
+      }
+      &::after  {
+        content: "";
+        background-image: url(../../Shared/Images/adorno-celeste.png);
+        width: 45px;
+        height: 76.68px;
+        background-size: 100%;
+        position: absolute;
+        top: -3rem;
+        right: -7rem;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  &__item {
+    &-content {
+      grid-area: content;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &-image {
+      width: 36.4rem;
+      height: 22.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      background-color: #D6D2CF;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      & img {
+        height: 100%;
+      }
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2.4rem;
+      padding: 1.2rem 3rem;
+    }
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+
+  }
+  &__icon--left {
+    grid-area: iconLeft;
+    align-self: center;
+  }
+  &__icon--right {
+    grid-area: iconRight;
+    align-self: center;
+  }
+}
+

@@ -1,0 +1,64 @@
+
+.formulario-control {
+  margin: 1rem 0;
+
+}
+
+.formulario-control label,
+.formulario-control input,
+.formulario-control textarea {
+  font-size: 1.6rem;
+  display: block;
+  // min-height: 4rem;
+}
+
+.formulario-control label {
+  // font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.formulario-control input,
+.formulario-control textarea,
+.formulario-control select {
+  width: 100%;
+  min-height: 4rem;
+  font: inherit;
+  border: 1px solid #BDBDBD;
+  padding: 0.5rem .75rem;
+  background: #F6F6F6;
+  border-radius: 15px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.formulario-control input:focus,
+.formulario-control textarea:focus,
+.formulario-control select:focus {
+  outline: none;
+  background: #ebebeb;
+  border-color:#93328E;
+}
+
+.formulario-control--invalid label,
+.formulario-control--invalid p {
+  color: red;
+  // text-align: center;
+}
+
+.formulario-control--invalid input,
+.formulario-control--invalid textarea,
+.formulario-control--invalid select {
+  border-color: red;
+  background: #ffd1d1;
+}
+
+.formulario-control.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.formulario-control.checkbox input{
+  width: auto;
+  min-height: 1.8rem;
+  margin-right: 1rem;
+}
+

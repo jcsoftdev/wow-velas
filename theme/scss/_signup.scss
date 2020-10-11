@@ -1,0 +1,78 @@
+.signup {
+  max-width: 75.1rem;
+  margin: 6rem auto;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title title" "email password" "documentType document" "name lastName" "city address" "telephoneType telephone" "terms terms" "text text" "button button" "forgot forgot";
+
+  &__title {
+    grid-area: title;
+    text-align: center;
+    font-size: 4.8rem;
+  }
+  & .form-control {
+    // &:nth-child(1) {
+    //   grid-area: title;
+    // }
+    width: 100%;
+    max-width: 36.4rem;
+    justify-self: center;
+    &:nth-child(2) {
+      grid-area: email;
+    }
+    &:nth-child(3) {
+      grid-area: password;
+    }
+    &:nth-child(4) {
+      grid-area: documentType;
+    }
+    &:nth-child(5) {
+      grid-area: document;
+    }
+    &:nth-child(6) {
+      grid-area: name;
+    }
+    &:nth-child(7) {
+      grid-area: lastName;
+    }
+    &:nth-child(8) {
+      grid-area: city;
+    }
+    &:nth-child(9) {
+      grid-area: address;
+    }
+    &:nth-child(10) {
+      grid-area: telephoneType;
+    }
+    &:nth-child(11) {
+      grid-area: telephone;
+    }
+    &:nth-child(12) {
+      grid-area: terms;
+      justify-self: start;
+      max-width: 100%;
+      margin: 2.5rem 0;
+    }
+
+  }
+  & p {
+    grid-area: text;
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  & .btn {
+    grid-area: button;
+    justify-self: center;
+    font-size: 1.8rem;
+    max-width: 72.8rem;
+  }
+
+  &>a {
+    grid-area: forgot;
+    margin-top: 1.9rem;
+    font-size: 1.6rem;
+    justify-self: center;
+  }
+}

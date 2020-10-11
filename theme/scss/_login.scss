@@ -1,0 +1,135 @@
+.login {
+  display: grid;
+  grid-template-columns: auto 43.5%;
+  max-height: 100vh;
+  height: 100vh;
+  
+  img {
+    object-fit: cover;
+    height: 100vh;
+    object-position: right;
+  }
+  &__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height:22.6rem;
+    &-icon {
+      background-color: #F2F2F2;
+      border-radius: 100%;
+      padding: 2.3rem;
+      margin-bottom: 3.3rem;
+    }
+    & h2 {
+      font-size: 2.4rem;
+      padding-bottom: 4.2rem;
+    }
+  }
+  &__form {
+    &-container{
+      max-width: 36.1rem;
+      justify-self: center;
+      // padding: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+
+      & .forgot{
+        font-size: 1.4rem;
+        margin: 1rem 0 ;
+      }
+
+      & .return {
+        margin-top: .8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__input {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+  }
+
+  & .form-control input, .btn {
+    width: 36.1rem;
+  }
+
+  & .form-control.checkbox {
+    align-self: start;
+  }
+
+}
+
+.form-control {
+  margin: 1rem 0;
+
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  font-size: 1.6rem;
+  display: block;
+  // min-height: 4rem;
+}
+
+.form-control label {
+  // font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+  width: 100%;
+  min-height: 4rem;
+  font: inherit;
+  border: 1px solid #BDBDBD;
+  padding: 0.5rem .75rem;
+  background: #F6F6F6;
+  border-radius: 15px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form-control input:focus,
+.form-control textarea:focus,
+.form-control select:focus {
+  outline: none;
+  background: #ebebeb;
+  border-color:#93328E;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+  color: red;
+  text-align: center;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea,
+.form-control--invalid select {
+  border-color: red;
+  background: #ffd1d1;
+}
+
+.form-control.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.form-control.checkbox input{
+  width: auto;
+  min-height: 1.8rem;
+  margin-right: 1rem;
+}
